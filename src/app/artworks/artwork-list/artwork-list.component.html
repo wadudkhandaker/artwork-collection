@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="spinner-container" *ngIf="loading$ | async">
+    <mat-spinner class="mat-spinner" [diameter]="50"></mat-spinner>
+  </div>
+  <div class="artworks">
+    <app-artwork-item *ngFor="let artwork of artworks$ | async" [artwork]="artwork" class="artwork-item"></app-artwork-item>
+  </div>
+  <app-artwork-paginator 
+    [totalItems]="(pagination$ | async)?.total ?? 0"
+    [itemsPerPage]="(pagination$ | async)?.limit ?? 12"
+    [currentPage]="(pagination$ | async)?.current_page ?? 1"
+    [loading]="(loading$ | async) ?? false"
+    (pageChange)="onPageChange($event)">
+  </app-artwork-paginator>
+</div>

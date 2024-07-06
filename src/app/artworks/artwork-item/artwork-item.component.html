@@ -1,0 +1,9 @@
+<div class="artwork-item">
+  <div class="image-container">
+    <img [src]="artwork.imageUrl || 'https://upload.wikimedia.org/wikipedia/commons/3/32/Art_Institute_of_Chicago_logo.svg'" alt="{{ artwork.title }}">
+  </div>
+  <h3>{{ artwork.title }}</h3>
+  <p>{{ artwork.artist_display }}</p>
+  <p>{{ artwork.creationPeriod }}</p>
+  <p>{{ artwork.material_titles.join(', ') }}</p>
+</div>

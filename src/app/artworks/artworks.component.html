@@ -1,0 +1,8 @@
+<div class="container">
+  <h1 class="center-text">ART COLLECTION</h1>
+  <!-- Filter and Sort Form -->
+  <app-filter-sort-form (filterChange)="filterChanged($event)" (sortChange)="sortChanged($event)"></app-filter-sort-form>
+
+  <!-- Artwork List -->
+  <app-artwork-list [filter]="filter" [sort]="sort"></app-artwork-list>
+</div>

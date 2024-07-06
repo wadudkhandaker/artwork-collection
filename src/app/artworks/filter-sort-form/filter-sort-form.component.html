@@ -1,0 +1,27 @@
+<div class="filter-sort-form">
+  <form>
+    <div class="filter-section">
+      <label for="filter-select">Filter:</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Style</mat-label>
+        <mat-select id="filter-select" multiple [(ngModel)]="selectedFilters" name="filters" (selectionChange)="onFilterChange()">
+          <mat-option *ngFor="let style of styles$ | async | keyvalue" [value]="style.key">
+            {{style.key}} ({{style.value}})
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="sort-section">
+      <label for="sort-select">Sort:</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Recommendation</mat-label>
+        <mat-select id="sort-select" [(ngModel)]="selectedSort" name="sort" (selectionChange)="onSortChange()">
+          <mat-option value="title">Title</mat-option>
+          <mat-option value="artist_display">Artist</mat-option>
+          <mat-option value="date_start">Date</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</div>

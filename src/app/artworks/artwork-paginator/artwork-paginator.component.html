@@ -1,0 +1,10 @@
+<div class="pagination">
+    <button id="first-page" (click)="setPage(1)" [disabled]="currentPage === 1 || loading">&laquo;&laquo;</button>
+    <button id="prev-page" (click)="setPage(currentPage - 1)" [disabled]="currentPage === 1 || loading">&laquo;</button>
+    <ng-container *ngFor="let page of pages">
+      <button *ngIf="isNumber(page)" id="page-{{ page }}" (click)="setPage(page)" [class.active]="page === currentPage" [disabled]="loading">{{ page }}</button>
+      <span *ngIf="!isNumber(page)">{{ page }}</span>
+    </ng-container>
+    <button id="next-page" (click)="setPage(currentPage + 1)" [disabled]="currentPage === totalPages || loading">&raquo;</button>
+    <button id="last-page" (click)="setPage(totalPages)" [disabled]="currentPage === totalPages || loading">&raquo;&raquo;</button>
+  </div>
