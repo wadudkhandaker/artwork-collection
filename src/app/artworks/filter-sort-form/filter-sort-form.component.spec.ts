@@ -22,7 +22,7 @@ describe('FilterSortFormComponent', () => {
         MatInputModule,
         MatSelectModule,
         MatCheckboxModule,
-        NoopAnimationsModule // Ensure animations module is included
+        NoopAnimationsModule
       ],
       providers: [
         provideMockStore({ initialState: { artwork: { styles: { 'Style 1': 1, 'Style 2': 2 } } } })

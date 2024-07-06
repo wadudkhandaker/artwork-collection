@@ -7,20 +7,20 @@
   form {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Aligns items to the start vertically */
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 20px; /* Adjust the gap between columns as needed */
+    gap: 20px;
   }
 
   .filter-section, .sort-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns labels to the start horizontally */
+    align-items: flex-start;
     flex: 1;
-    min-width: 200px; /* Adjust the minimum width as needed */
+    min-width: 200px;
 
     label {
-      margin-bottom: 4px; /* Adds space between label and form field */
+      margin-bottom: 4px;
     }
 
     mat-form-field {

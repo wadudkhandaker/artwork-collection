@@ -24,7 +24,7 @@ export class ArtworkService {
    * @returns An observable containing the artworks and pagination information.
    */
   getArtworks(page: number, size: number = 12): Observable<{ artworks: Artwork[], pagination: any }> {
-    const from = (page - 1) * size; // Assuming 12 results per page
+    const from = (page - 1) * size;
     let params = new HttpParams()
       .set('fields', 'id,title,artist_display,date_start,date_end,place_of_origin,medium_display,style_titles,thumbnail,image_id,material_titles') // Include material_titles field
       .set('page', page.toString())

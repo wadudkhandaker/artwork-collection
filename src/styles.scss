@@ -1,4 +1,4 @@
-// Import Angular Material core theming mixins
+
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 
 html, body { height: 100%; }
@@ -12,13 +12,9 @@ body {
     font-size: 2.5em;
     margin-bottom: 20px;
   }
-/* Angular 15 adds grey background on mat form components */
-/* below removes that background color */
-/* Manipulate initial background color*/
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
     background-color: transparent !important;
 }
-/*Manipulate background color on hover and focus*/
 .mat-mdc-form-field-focus-overlay {
       background-color: transparent !important;
 }

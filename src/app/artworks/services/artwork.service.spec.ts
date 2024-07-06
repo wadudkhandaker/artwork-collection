@@ -67,7 +67,7 @@ describe('ArtworkService', () => {
       expect(result.artworks.length).toBe(1);
       expect(result.artworks[0].imageUrl).toBe('https://iiif.example.com/some-image-id/full/843,/0/default.jpg');
       expect(result.artworks[0].creationPeriod).toBe('Origin (2000)');
-      expect(result.artworks[0].material_titles).toEqual(['oil paint (paint)', 'canvas, paint, painting']); // Check material_titles
+      expect(result.artworks[0].material_titles).toEqual(['oil paint (paint)', 'canvas, paint, painting']);
       expect(result.pagination).toEqual(mockArtworkResponse.pagination);
     });
 

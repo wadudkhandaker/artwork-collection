@@ -51,7 +51,7 @@ describe('ArtworkListComponent', () => {
   });
 
   it('should handle page change correctly', () => {
-    const pageIndex = 2; // Example page index
+    const pageIndex = 2;
     component.onPageChange(pageIndex);
     expect(store.dispatch).toHaveBeenCalledWith(ArtworkActions.loadArtworks({ page: pageIndex }));
   });
